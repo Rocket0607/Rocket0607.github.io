@@ -87,6 +87,29 @@ h2{
     margin-top: -595px;
     margin-right: 300px;
     margin-left: 650px;
+    z-index: 2;
+}
+#encrypt-card{
+    margin-left: 10%;
+    z-index: 3;
+    text-align: center;
+}
+#email-card{
+    margin-left: 70%;
+    z-index: 3;
+    text-align: center;
+    margin-top: -493px;
+}
+#project-back{
+    background-image: url("project-background.jpg");
+    background-color: black;
+    height: 80%;
+    width: 100%;
+    background-size: 100%;
+    filter: blur(2px);
+    z-index: 1;
+    position: absolute;
+    background-attachment: fixed;
 }
         </style>
 
@@ -94,7 +117,6 @@ h2{
 
     <body>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
         <div class = header-img></div>
         <div class = "header-text">
             <h1 style="font-size: 100px;">
@@ -124,6 +146,8 @@ h2{
         <br>
         <br>
         <br>
+        <br>
+        <br>
 
         <blockquote class="about-header">
             <h2>
@@ -137,15 +161,13 @@ h2{
             <br>
             <br>
             <br>
-            <br>
-            <br>
+            <br><br>
             <br>
             <br>
 
             
             
             <div class="media">
-                <img src="..." class="mr-3" alt="...">
                 <div class="media-body">
                   You probably already know this but I'm Rohit.
                   I'm 13 years old and in grade 8.
@@ -153,7 +175,36 @@ h2{
                   I can code websites with html and css and apps with Python.
                   I'm really interested in the topic of AI and have done some projects with the tensorflow framework by Google.
                 </div>
-              </div>   
+              </div>  
+
+              
+              <div id = "project-back"></div>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <div class="card" style="width: 18rem;"  id = "encrypt-card">
+                <img src="Encrypt-screen.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Encrypt</h5>
+                  <p class="card-text">This is a Python app made with the Kivy framework. It is a very minimalist and elegant app which encrypts and decrypts messages.
+                  </p>
+                  <a href="https://github.com/Rocket0607/Python-Projects" class="btn btn-primary">GitHub</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;"  id = "email-card">
+                <img src="Email-screen.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Email</h5>
+                  <p class="card-text">This is another Python app made with the Kivy framework. It allows you to log in and send emails easily.
+                  </p>
+                  <a href="https://github.com/Rocket0607/Python-Projects" class="btn btn-primary">GitHub</a>
+                </div>
+              </div>
         
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
