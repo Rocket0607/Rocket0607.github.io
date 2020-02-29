@@ -73,6 +73,9 @@ h2{
     font-family: 'Raleway';  
     font-size: 50; 
 }
+#about-me-background{
+    background: linear-gradient(rgba(169, 176, 180, 0.5), rgba(184, 191, 197, 0.5), rgba(199, 207, 213, 0.5), rgba(214, 222, 231, 0.5), rgba(230, 238, 248, 0.5));
+}
 .me{
     width: 300;
     height: auto;
@@ -88,6 +91,7 @@ h2{
     margin-right: 300px;
     margin-left: 650px;
     z-index: 2;
+    color: #2b2e3f;
 }
 #encrypt-card{
     margin-left: 10%;
@@ -117,6 +121,26 @@ h2{
 
     <body>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <nav class="navbar sticky-top navbar-dark" style="background-color: #283f55;">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-header">About<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         <div class = header-img></div>
         <div class = "header-text">
             <h1 style="font-size: 100px;">
@@ -131,6 +155,7 @@ h2{
                 </div>
         </div>
 
+        <div id = "about-me-background">
         <br>
         <br>
         <br>
@@ -148,8 +173,7 @@ h2{
         <br>
         <br>
         <br>
-
-        <blockquote class="about-header">
+        <blockquote class="about-header" id = "about-header">
             <h2>
             About Me
             </h2>
@@ -175,14 +199,16 @@ h2{
                   I can code websites with html and css and apps with Python.
                   I'm really interested in the topic of AI and have done some projects with the tensorflow framework by Google.
                 </div>
+              </div>
               </div>  
 
               
-              <div id = "project-back"></div>
+              <div id = "project-back""></div>
 
               <br>
               <br>
               <br>
+              <div id="projects"></div>
               <br>
               <br>
 
