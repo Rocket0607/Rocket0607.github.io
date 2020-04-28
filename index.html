@@ -1,185 +1,435 @@
-<!DOCTYPE html>
-<html class="text-center" style="background-color: rgba(10,9,9,0.9);color: rgb(255,255,255);">
+<html>
+    <head>
+        <title>Rohit Koneru</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+            }
+            .nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                min-height: 8vh;
+                transition: background .5s;
+                background-color: transparent;
+                position: fixed;
+                width: 100%;
+            }
+            .brand {
+                font-size: 25px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: white;
+                letter-spacing: 2px;
+            }
+            .brand a {
+                text-decoration: none;
+                color: white;
+            }
+            .nav-content {
+                display: flex;
+                justify-content: space-around;
+                width: 40%;
+                margin-right: -10%;
+                letter-spacing: 1px;
+            }
+            .nav-content li {
+                list-style: none;
+            }
+            .nav-content a {
+                text-decoration: none;
+                list-style: none;
+                color: white;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .nav-scroll {
+                background-color: black;
+                color: white;
+                opacity: 0.95;
+            }
+            .nav-scroll a {
+                color: white;
+            }
+            .header-stuff {
+                width: 100%;
+                height: 100%;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-image: url("code.jpg");
+                text-transform: uppercase;
+                color: white;
+                text-align: center;
+                padding-top: 13.5%;
+                font-size: 250%;
+            }
+            @keyframes changing-text {
+            
+                25%{
+                    content: "App Developer";
+                }
+                50%{
+                    content: "Web Developer"
+                }
+                75%{
+                    content: "ML Enthusiast";
+                }
+            }
+            .animated::after  {
+                z-index: 5;
+                font-size: 50px;
+                content: "Programmer";
+                animation: changing-text 5s infinite;
+            }
+            .about-head {
+                text-transform: uppercase;
+                font-size: 40px;
+                padding-top: 10%;
+                text-align: center;
+                color: rgb(48,58,61);
+            }
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-top: 5%;
+                color: rgb(48,58,61);
+            }
+            #me-pic {
+                width: 40%;
+                height: auto;
+                margin-left: 30%;
+                padding-top: 40px;
+                border-radius: 1000px;
+            }
+            .about-para {
+                font-family: raleway;
+                font-size: 25px;
+                word-spacing: 5px;
+                letter-spacing: 1px;
+                line-height: 45px;
+                padding: 10px 10px 10px 10px;
+                margin-right: 15%;
+                margin-left: -10%;
+                text-align: center;
+            }
+            .skills-head {
+                text-align: center;
+                margin-top: 150px;
+                font-size: 40px;
+                text-transform: uppercase;
+                color: rgb(48,58,61);
+            }
+            .skills-grid {
+                display: grid;
+                grid-template-columns: 30% 30%;
+                justify-items: center;
+                padding-top: 100px;
+                font-size: 30px;
+                text-align: center;
+                font-family: poppins;
+                text-transform: uppercase;
+                font-weight: bold;
+                column-width: 30%;
+                align-items: center;
+                grid-template-rows: auto auto auto;
+                row-gap: 100px;
+                margin-right: -65%;
+                margin-top: 50px;
+                color: rgb(48,58,61);
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Rohit</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
-</head>
+            }
+            .skill {
+                padding: 50px 50px 50px 50px;
+                column-width: 30%;
+                height: 300px;
+                width: 50%;
+                box-shadow: 1px 1px 25px;
+                border-radius: 10px;
+            }
+            #python {
+                margin-top: -75px;
+                width: 175px;
+                height: auto;
+            }
+            #js {
+                margin-top: -50px;
+                width: 125px;
+                height: auto;
+            }
+            .skill2 {
+                padding: 50px 50px 50px 50px;
+                column-width: 30%;
+                height: 315px;
+                width: 50%;
+                box-shadow: 1px 1px 25px;
+                border-radius: 20px;
+            }
+            #website {
+                margin-top: -55px;
+                width: 100px;
+                height: auto;
+                padding-bottom: 10px;
+            }
+            #app {
+                margin-top: -40px;
+                width: 65px;
+                height: auto;
+                padding-bottom: 10px;
+            }
+            .skill-para {
+                font-size: 15px;
+                font-weight: 100;
+                margin-top: 25px;
+                text-transform: capitalize;
+            }
+            .projects-head {
+                text-transform: uppercase;
+                padding-top: 10%;
+                text-align: center;
+                font-size: 40px;
+                color: rgb(48,58,61);
+            }
+            .projects-grid {
+                display: grid;
+                grid-template-columns: 30% 30%;
+                justify-items: center;
+                margin-right: -65%;
+                padding-top: 10%;
+                color: rgb(48,58,61);
+                font-size: 30px;
+                font-weight: bold;
+                grid-template-rows: auto auto auto;
+                row-gap: 100px;
+            }
+            .project {
+                padding: 50px 50px 50px 50px;
+                box-shadow: 1px 1px 25px;
+                width: 50%;
+                text-align: center;
+                border-radius: 25px;
+            }
+            #projectText1 {
+                font-size: 20px;
+                font-weight: 100;
+                margin-top: 25px;
+                text-transform: capitalize;
+            }
+            #projectText2 {
+                font-size: 20px;
+                font-weight: 100;
+                margin-top: 25px;
+                text-transform: capitalize;
+            }
+            #projectText3 {
+                font-size: 20px;
+                font-weight: 100;
+                margin-top: 25px;
+                text-transform: capitalize;
+            }
+            #projectText4 {
+                font-size: 20px;
+                font-weight: 100;
+                margin-top: 25px;
+                text-transform: capitalize;
+            }
+            .contacts {
+                display: grid;
+                grid-template-columns: 10% 10% 10%;
+                background-color: black;
+                width: 100%;
+                height: 30%;
+                color: white;
+                justify-items: center;
+                align-items: center;
+                font-family: raleway;
+                font-size: 20px;
+                background-color: rgb(30,30,30);
+            }
+            .contact {
+                border: solid;
+                padding: 15px 15px 15px 15px;
+                color: rgb(121,167,204);
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-left: 1000px;
+            }
+            #contact {
+                text-transform: uppercase;
+                margin-left: 1000px;
+                color: rgb(230,230,230);
+                font-weight: bolder;
+                font-size: 35px;
+            }
+            @keyframes change_background_stuff_contact{
+                to{
+                    background-color: rgb(121,167,204);
+                    color: rgb(30,30,30);
+                }
+            }
 
-<body id="page-top" style="background-color: rgba(255,255,255,0);color: #ffffff;">
-    <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#">Rohit</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
-                value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="masthead" style="background-image:url(&quot;assets/img/code.jpg&quot;);">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1 class="text-center d-inline brand-heading" style="width: 900px;margin: 0px auto;/*font-size: 10.2vw;*/">Hey,<br>
- I'm ROhit Koneru</h1>
-                    </div>
-                    <div class="col-lg-8 mx-auto"><br>
-<br>
-<div><h1 id=description></h1></div><br>
-<br>
-<br>
-</div>
-                </div>
-            </div><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a></div>
-    </header>
-    <section id="about" class="content-section text-center" style="background-color: white;">
-        <h2 style="color: black;font-size: 35px;">About Me</h2>
-    </section>
-    <div style="padding: 113px;background-color: #ffffff;margin-top: -175px;">
-        <div class="container" style="background-color: rgba(255,255,255,0);">
-            <div class="row" style="background-color: rgba(255,255,255,0);">
-                <div class="col-md-6"><img src="assets/img/me.jpg" style="width: 342px;border-radius: 500px;margin: 45px;"></div>
-                <div class="col-md-6" style="background-color: rgba(255,255,255,0);">
-                    <p class="text-center" style="background-color: rgba(255,255,255,0);color: rgb(34,34,34);font-size: 25px;font-family: Raleway, sans-serif;line-height: 45px;">You probably already know this (from the title) but I'm Rohit. I'm 13 years old and in grade 8. I love to code (in Python), read books. I can code websites with html and css and apps with Python. I'm really interested in the topic
-                        of AI and have done some projects with the tensorflow framework by Google. I've made a convolutional network that can classify cats and dogs, one that can identify number and one that can detect if you have pneumonia or not, just
-                        by looking at an x-ray of your chest. I'm also very interested in genomics.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="skills" class="features-boxed" style="background-color: white;">
-        <div class="container" style="background-color: white;">
-            <div class="intro">
-                <h2 class="text-center" style="font-size: 35px;">Skills</h2>
-            </div>
-            <div class="row justify-content-center features">
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div id="skill-python" class="box" style="box-shadow: 1px 1px 25px;"><i class="fa fa-map-marker icon"></i>
-                        <h3 class="name" style="font-size: 25px;">Python</h3>
-                        <p class="description" style="font-size: 20px;">I am fluent in the Python Programming language.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div id="skill-appdev" class="box" style="box-shadow: 1px 1px 25px;"><i class="fa fa-clock-o icon"></i>
-                        <h3 class="name" style="font-size: 25px;">App Development</h3>
-                        <p class="description" style="font-size: 20px;">I can currently make apps in Python and I am learning to make apps in React.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div id="skill-webdev" class="box" style="box-shadow: 1px 1px 25px;"><i class="fa fa-list-alt icon"></i>
-                        <h3 class="name" style="font-size: 25px;">Web Development</h3>
-                        <p class="description" style="font-size: 20px;">I know HTML and CSS and am currently learning Javascript.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item"></div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item"></div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item"></div>
-            </div>
-        </div>
-    </div>
-    <div class="projects-horizontal">
-        <div class="container" id="projects">
-            <div class="intro">
-                <h2 class="text-center" style="font-size: 35px;">Projects </h2>
-            </div>
-            <div class="row projects">
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a></div>
-                        <div class="col">
-                            <h3 class="name" style="font-size: 25px;">Encrypt</h3>
-                            <p class="description" style="font-size: 20px;">This app written in python will encrypt any message for you. After sending that message to another person, they can use tha pp to decrypt it.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
-                        <div class="col">
-                            <h3 class="name" style="font-size: 25px;">Tasks</h3>
-                            <p class="description" style="font-size: 20px;">This app will keep your tasks straight makeing sure you know what you have to do.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg"></a></div>
-                        <div class="col">
-                            <h3 class="name" style="font-size: 25px;">Email</h3>
-                            <p class="description" style="font-size: 20px;">This app makes emailing simple. Simply login, type in the email of who you want to send it too, type the subject and message and send.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/minibus.jpeg"></a></div>
-                        <div class="col">
-                            <h3 class="name" style="font-size: 25px;">Pneumonia Model</h3>
-                            <p class="description" style="font-size: 20px;">This Machine Learning model built with tensorflow can tell if you have pneumonia or not in a few seconds by looking at you x-ray.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section id="contact" class="content-section text-center" style="padding: 50px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Contact me</h2>
-                    <p></p>
-                    <ul class="list-inline banner-social-buttons">
-                        <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button">
-    <a href="mailto:rohitkoneru2510@gmail.com">
-        <span class="network-name">
-        Gmail
-        </span>
-    </a>
-</button></li>
-                        <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button">
-    <a href="https://www.linkedin.com/in/rohit-koneru-5b0661196/">
-        <span class="network-name">
-        Linkdeln
-        </span>
-    </a>
-</button></li>
-                        <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button">
-    <a href="https://github.com/Rocket0607">
-        <i class="fa fa-github fa-fw">
-        </i>
-        <span class="network-name">github</span>
-    </a>
-</button></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="map-clean"></div>
-    <footer style="padding: 10px;">
-        <div class="container text-center">
-            <p>Copyright ©&nbsp;Rohit 2020</p>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/grayscale.js"></script>
-    <script src="assets/js/untitled.js"></script>
-</body>
+            @keyframes change_background_stuff_contact_a{
+                to{
+                    color: rgb(30,30,30);
+                }
+            }
+            .contact a {
+                text-decoration: none;
+                color: rgb(121,167,204);
+            }
+            .contact:hover {
+                animation: change_background_stuff_contact 1s forwards;
 
+            }
+            .contact:hover a {
+                animation: change_background_stuff_contact_a 1s forwards;
+                
+            }
+        </style>
+        <script>
+            function afterScroll() {
+                let nav = document.querySelector(".nav");
+                let links = document.querySelectorAll(".nav-content a")
+                
+                if(window.pageYOffset > 0) {
+                    nav.classList.add("nav-scroll");
+                    links.classList.add("nav-scroll");
+                }else {
+                    nav.classList.remove("nav-scroll");
+                    links.classList.remove("nav-scroll");
+                };
+            };
+            window.addEventListener("scroll", afterScroll)
+
+            function projectsText(element, aboutText) {
+                let x = document.querySelector(element)
+                let y = document.createElement("p")
+                y.appendChild(document.createTextNode(aboutText))
+                x.appendChild(y)
+                window.scroll()
+            }
+            function removeProjectsText(element) {
+                let x = document.querySelector(element)
+                x.innerHTML = ""
+            }
+        </script>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="brand">
+                <a href="#">Rohit</a>
+            </div>
+            <ul class="nav-content">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-stuff">
+            <h1>hey,</h1>
+            <h1>i'm rohit koneru</h1>
+            <br>
+            <br>
+            <h2 class="animated"></h2>
+        </div>
+        <div class="about-full">
+            <h3 class="about-head" id="about">
+                About Me
+            </h3>
+            <div class="about-grid">
+                <div class="about-picture">
+                    <img src="me.jpg" alt="Rohit Koneru" id="me-pic">
+                </div>
+                <div class="about-para">
+                    You probably already know this (from the title) but I'm Rohit. I'm 13 years old and in 
+                grade 8. I love to code, read books. I can code websites with html, css and javascript
+                and apps with Python. I'm really interested in the topic of AI and have done some 
+                projects with the tensorflow framework by Google. I've made a convolutional network 
+                that can classify cats and dogs, one that can identify numbers and one that can detect 
+                if you have pneumonia or not, just by looking at an x-ray of your chest! I'm also very 
+                interested in the topic of genomics and synthetic biology.
+                </div>
+            </div>
+        </div>
+        <div class="skills-full">
+            <h2 class="skills-head" id="skills">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="python_logo.jpg" alt="Python" id="python">
+                    Python
+                    <div class="skill-para">
+                    I am fluent in the Python programming language.
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="js_logo.png" alt="Javascript" id="js">
+                    Javascript
+                    <div class="skill-para">
+                        I am fluent in Javascript programming language.
+                    </div>
+                </div>
+                <div class="skill2">
+                    <img src="website_icon.png" alt="Website" id="website">
+                    <br>
+                    Web Development
+                    <div class="skill-para">
+                        I love making websites with HTML, CSS and Javascript.
+                    </div>
+                </div>
+                <div class="skill2">
+                    <img src="phone_icon.png" alt="Mobile App" id="app">
+                    <br>
+                    App <br> Development
+                    <div class="skill-para">
+                        I also love making apps throught HTML, CSS and Javascript.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-full">
+            <h2 class="projects-head" id="projects">Projects</h2>
+            <div class="projects-grid">
+                <div class="project" onmouseover="projectsText('#projectText1','This app written in python will encrypt any message for you. After sending that message to another person, they can use the app to decrypt it.')" onmouseout="removeProjectsText('#projectText1')">
+                    Encrypt
+                    <div id="projectText1">
+                        
+                    </div>
+                </div>
+                <div class="project" onmouseover="projectsText('#projectText2', 'This app makes emailing simple. Simply login, type in the email of who you want to send it too, type the subject and message and send.')" onmouseout="removeProjectsText('#projectText2')">
+                    Email
+                    <div id="projectText2">
+
+                    </div>
+                </div>
+
+                <div class="project" onmouseover="projectsText('#projectText3','This app will keep your tasks straight makeing sure you know what you have to do.')" onmouseout="removeProjectsText('#projectText3')">
+                    Tasks
+                    <div id="projectText3">
+                        
+                    </div>
+                </div>
+                <div class="project" onmouseover="projectsText('#projectText4', 'This Machine Learning model built with tensorflow can tell if you have pneumonia or not in a few seconds just by looking at your x-ray.')" onmouseout="removeProjectsText('#projectText4')">
+                    Pneumonia?
+                    <div id="projectText4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts">
+            <div></div>
+            <h1 id="contact"><strong>contact</strong></h1>
+            <div></div>
+            <div class="contact"><a href="mailto:rohitkoneru2510@gmail.com">Gmail</a></div>
+            <div class="contact"><a href="https://www.linkedin.com/in/rohit-koneru-5b0661196/">Linkdeln</a></div>
+            <div class="contact"><a href="https://github.com/rocket0607">Github</a></div>
+        </div>
+    </body>
 </html>
