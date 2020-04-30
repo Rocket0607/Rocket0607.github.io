@@ -208,6 +208,14 @@
                 grid-template-rows: auto auto auto;
                 row-gap: 100px;
             }
+            @keyframes open_project_text {
+                from{
+                    opacity: 0%;
+                }
+                to{
+                    opacity: 100%;
+                }
+            }
             .project {
                 padding: 50px 50px 50px 50px;
                 box-shadow: 1px 1px 25px;
@@ -312,6 +320,7 @@
                 let y = document.createElement("p")
                 y.appendChild(document.createTextNode(aboutText))
                 x.appendChild(y)
+                y.style.animation = "open_project_text 1s"
                 window.scroll()
             }
             function removeProjectsText(element) {
