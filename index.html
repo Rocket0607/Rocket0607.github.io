@@ -5,6 +5,7 @@
       @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
       @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
       @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
 
       * {
         margin: 0px;
@@ -22,9 +23,11 @@
         background-color: transparent;
         position: fixed;
         width: 100%;
+        font-family: roboto;
+        font-weight: 500;
       }
       .brand {
-        font-size: 30px;
+        font-size: 32px;
         font-weight: bold;
         text-transform: uppercase;
         color: white;
@@ -48,9 +51,9 @@
         text-decoration: none;
         list-style: none;
         color: white;
-        font-weight: bold;
+        font-weight: 500;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 22px;
       }
       .nav-scroll {
         background-color: black;
@@ -70,9 +73,11 @@
         text-transform: uppercase;
         color: white;
         text-align: center;
-        padding-top: 13.5%;
-        font-size: 250%;
-        font-family: source sans pro;
+        padding-top: 10.5%;
+        font-size: 350%;
+        font-family: roboto;
+        font-weight: 500;
+        letter-spacing: 2.25px;
       }
       @keyframes changing-text {
         25% {
@@ -87,7 +92,7 @@
       }
       .animated::after {
         z-index: 5;
-        font-size: 50px;
+        font-size: 60px;
         content: "Programmer";
         animation: changing-text 5s infinite;
       }
@@ -97,6 +102,7 @@
         padding-top: 10%;
         text-align: center;
         color: rgb(48, 58, 61);
+        font-family: roboto;
       }
       .about-grid {
         display: grid;
@@ -128,6 +134,7 @@
         font-size: 40px;
         text-transform: uppercase;
         color: rgb(48, 58, 61);
+        font-family: roboto;
       }
       .skills-grid {
         display: grid;
@@ -136,9 +143,9 @@
         padding-top: 100px;
         font-size: 30px;
         text-align: center;
-        font-family: source sans pro;
+        font-family: roboto;
+        font-weight: 500;
         text-transform: uppercase;
-        font-weight: bold;
         column-width: 30%;
         align-items: center;
         grid-template-rows: auto auto auto;
@@ -150,11 +157,10 @@
       .skill {
         padding: 50px 50px 50px 50px;
         column-width: 30%;
-        height: 300px;
+        height: 315px;
         width: 50%;
         box-shadow: 1px 1px 25px;
-        border-radius: 10px;
-        font-family: source sans pro;
+        border-radius: 20px;
       }
       #python {
         margin-top: -75px;
@@ -191,6 +197,7 @@
         font-weight: 100;
         margin-top: 25px;
         text-transform: capitalize;
+        font-family: raleway;
       }
       .projects-head {
         text-transform: uppercase;
@@ -198,6 +205,7 @@
         text-align: center;
         font-size: 40px;
         color: rgb(48, 58, 61);
+        font-family: roboto;
       }
       .projects-sub-head1 {
         text-transform: uppercase;
@@ -206,6 +214,7 @@
         font-size: 35px;
         color: rgb(48, 58, 61);
         font-weight: normal;
+        font-family: roboto;
       }
       .projects-grid {
         display: grid;
@@ -276,6 +285,7 @@
         background-color: rgb(30, 30, 30);
         font-weight: lighter;
         letter-spacing: 2px;
+        padding-left: 100px;
       }
       .contact {
         border: solid;
@@ -447,6 +457,13 @@
             This is an app that makes emailing quick and easy for everyone.
           </div>
         </div>
+        <div class="project">
+          Weather
+          <div id="projectText4">
+            A simple way to tell the current temperature, humidity, wind speed
+            and the phase of the moon (cause why not?).
+          </div>
+        </div>
       </div>
       <h2 class="projects-sub-head1" id="projects">Articles</h2>
       <div class="projects-grid">
@@ -477,3 +494,4 @@
     </div>
   </body>
 </html>
+
