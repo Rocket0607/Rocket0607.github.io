@@ -79,14 +79,11 @@
         letter-spacing: 2.25px;
       }
       @keyframes changing-text {
-        25% {
+        33% {
           content: "App Developer";
         }
-        50% {
+        66% {
           content: "Web Developer";
-        }
-        75% {
-          content: "ML Enthusiast";
         }
       }
       .animated::after {
@@ -204,6 +201,7 @@
         width: 50%;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
         border-radius: 20px;
+        overflow: hidden;
         animation: unelevate 1s forwards;
       }
       .skill2:hover {
@@ -399,8 +397,8 @@
       </ul>
     </nav>
     <div class="header-stuff">
-      <h1>hey,</h1>
-      <h1>i'm rohit koneru</h1>
+      <h1 class="header-text-1">hey,</h1>
+      <h1 class="header-text-2">i'm rohit koneru</h1>
       <br />
       <br />
       <h2 class="animated"></h2>
